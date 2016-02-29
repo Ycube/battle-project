@@ -9,13 +9,31 @@
     <th>Kills </th>
     <th>Assists </th>
   </tr>
-  <tr class="name" ng-repeat="name in champList">
+  <tr class="name" ng-repeat="name in champList | orderBy:['totalSessionsPlayed']">
+  <h2>{{totalSessionsPlayed}}</h2>
     <td>{{name}}</td>
     <td>{{champStats[$index].totalSessionsPlayed}}</td>
-     <td>{{champStats[$index].totalSessionsWon}}</td>
-     <td>{{champStats[$index].totalSessionsLost}}</td>
-     <td>{{champStats[$index].totalChampionKills / champStats[$index].totalSessionsPlayed | number:2}}</td>
-     <td>{{champStats[$index].totalAssists / champStats[$index].totalSessionsPlayed | number:2}}</td> 
+    <td>{{champStats[$index].totalSessionsWon}}</td>
+    <td>{{champStats[$index].totalSessionsLost}}</td>
+    <td>{{champStats[$index].totalChampionKills / champStats[$index].totalSessionsPlayed | number:2}}</td>
+    <td>{{champStats[$index].totalAssists / champStats[$index].totalSessionsPlayed | number:2}}</td> 
   </tr>
  </table>
+
+ 
+ <!-- ////////////test data table ///////////// -->
+ <table class="table" id="roster">
+   <tr>
+     <th>roster</th>
+     <th>Plays</th>
+     <th>Assists</th>
+   </tr>
+
+   <tr ng-repeat"champ in roster">
+    <td>{{champ.name}}</td>     
+    <td>{{champ.totalSessionsPlayed}}</td>
+    <td>{{champ.totalAssists}}</td>
+   </tr>
+ </table>
+<!-- ///////////end test data table///////////////// -->
 </div>
