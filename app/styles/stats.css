@@ -1,6 +1,15 @@
 .username {
   text-align: center;
 }
+
+h3 {
+  color: white
+}
 .name {
   padding: 2%;
+  color: white;
+}
+
+p {
+  color: white;
 }
