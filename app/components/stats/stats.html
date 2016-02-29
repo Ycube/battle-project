@@ -1,11 +1,21 @@
 <div class="container-fluid main">
- <h3 class="username">Username: {{ userName }}</h3>
- <table class="name" ng-repeat="name in champList">  
-   <td>Champion: {{name}}</td>
-   <td>Games: {{champStats[$index].totalSessionsPlayed}}</td>
-   <td>Win: {{champStats[$index].totalSessionsWon}}</td>
-   <td>Loss: {{champStats[$index].totalSessionsLost}}</td>
-   <td>Kill: {{champStats[$index].totalChampionKills / champStats[$index].totalSessionsPlayed | number:2}}</td>
-   <td>Assist: {{champStats[$index].totalAssists / champStats[$index].totalSessionsPlayed | number:2}}</td>
+ <h3 class="username">Summoner {{ userName }} Stats</h3>
+ <table class="table">  
+  <tr>
+    <th>Champion </th>
+    <th>Games </th>
+    <th>Wins </th>
+    <th>Loss </th>
+    <th>Kills </th>
+    <th>Assists </th>
+  </tr>
+  <tr class="name" ng-repeat="name in champList">
+    <td>{{name}}</td>
+    <td>{{champStats[$index].totalSessionsPlayed}}</td>
+     <td>{{champStats[$index].totalSessionsWon}}</td>
+     <td>{{champStats[$index].totalSessionsLost}}</td>
+     <td>{{champStats[$index].totalChampionKills / champStats[$index].totalSessionsPlayed | number:2}}</td>
+     <td>{{champStats[$index].totalAssists / champStats[$index].totalSessionsPlayed | number:2}}</td> 
+  </tr>
  </table>
 </div>
