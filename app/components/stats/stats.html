@@ -1,14 +1,11 @@
 <div class="container-fluid main">
- <p class="username">Username: {{ userName }}</p>
- <p class="username">Avg per game</p>
- <div class="name" ng-repeat="name in champList">  
-   <div>Champion: {{name}}</div>
-   <div>Games: {{champStats[$index].totalSessionsPlayed}}</div>
-   <div>Win: {{champStats[$index].totalSessionsWon}}</div>
-   <div>Loss: {{champStats[$index].totalSessionsLost}}</div>
-   <div>Kill: {{champStats[$index].totalChampionKills / champStats[$index].totalSessionsPlayed | number:2}}</div>
-   <div>Assist: {{champStats[$index].totalAssists / champStats[$index].totalSessionsPlayed | number:2}}</div>
- </div>
-
-
+ <h3 class="username">Username: {{ userName }}</h3>
+ <table class="name" ng-repeat="name in champList">  
+   <td>Champion: {{name}}</td>
+   <td>Games: {{champStats[$index].totalSessionsPlayed}}</td>
+   <td>Win: {{champStats[$index].totalSessionsWon}}</td>
+   <td>Loss: {{champStats[$index].totalSessionsLost}}</td>
+   <td>Kill: {{champStats[$index].totalChampionKills / champStats[$index].totalSessionsPlayed | number:2}}</td>
+   <td>Assist: {{champStats[$index].totalAssists / champStats[$index].totalSessionsPlayed | number:2}}</td>
+ </table>
 </div>

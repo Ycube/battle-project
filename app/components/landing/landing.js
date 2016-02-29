@@ -1,8 +1,8 @@
 angular.module('lolStats.landing', [])
 
   .controller('LandingController', ['$scope', '$location', 'landingService' ,function ($scope, $location, landingService) {
-    $scope.userName = '';
-    $scope.season = 'SEASON2016';
+    $scope.userName = 'rondomvp';
+    $scope.season = 'SEASON2014';
     
     $scope.sendUsername = function(){
       landingService.sendData($scope.userName, $scope.season)

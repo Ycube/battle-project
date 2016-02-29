@@ -1,4 +1,17 @@
+body {
+  background-color: black;
+}
+
+.jumbotron { 
+background:  url(http://i.imgur.com/0hAUqAE.gif) no-repeat center center fixed; 
+background-size: cover;
+}
+
+.battle {
+  color: white;
+}
+
 form {
   text-align: center;
-  margin-top: 15%
+  margin-top: 10%
 }

@@ -2,6 +2,7 @@
 <html ng-app="lolStats">
   <head>
     <title>LoLStats</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/landing.css"> 
     <link rel="stylesheet" href="styles/stats.css"> 
   </head>
@@ -9,13 +10,15 @@
   <body>
     
     <div class="container">
+      <div class="page-header">
+        <h1 class="battle">Battle Project <small>League of Legend Stats</small></h1>
+      </div>
       <div ui-view></div>
     </div>
     
     <script src="lib/angular/angular.min.js"></script>
     <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="lib/angular-bootstrap/ui-bootstrap.min.js"></script>
-    
     <script src="components/landing/landing.js"></script>
     <script src="components/stats/stats.js"></script>
     <script src="app.js"></script>
