@@ -1,4 +1,4 @@
-var landingController = require('./landingController.js');
+var landingController = require('../controllers/landingController.js');
 
 module.exports = function (router) {
 
