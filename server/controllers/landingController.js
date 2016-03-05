@@ -1,7 +1,7 @@
 var utils = require('../config/utils.js');
 var request = require('request');
 require('dotenv').config();
-
+//fix this to use promises and save each summoner request into mongoose
 module.exports = {
   getSummonerId : function (req, res, next) {
     var name = req.body.userName;
