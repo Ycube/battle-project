@@ -1,3 +1,5 @@
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost/lol_database');
+var db = mongoose.connect('mongodb://localhost/lol_database');
+
+module.exports  = db;

@@ -1,14 +1,11 @@
 var mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
 var Schema = mongoose.Schema;
 
 var summonerSchema = new Schema({
-  name : String,
-  play : Number,
-  win : Number,
-  loss : Number,
-  kill : Number,
-  assist : Number 
+  username : String,
+  summonerId : Number,
+  searches : Number
 });
-
 
 module.exports = mongoose.model('Summoner', summonerSchema);
