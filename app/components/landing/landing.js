@@ -17,7 +17,6 @@ angular.module('lolStats.landing', [])
       landingService.getSavedSummoners()
         .then(function(res) {
           $scope.savedSummoners = res.data;
-            // console.log($scope.savedSummoners)
         });
     }
 
