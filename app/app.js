@@ -2,7 +2,9 @@ angular.module('lolStats', [
   'lolStats.landing',
   'lolStats.stats',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ui.bootstrap.tpls',
+  'ui.bootstrap.typeahead'
   ])
 
 .config(function ($stateProvider, $urlRouterProvider) {

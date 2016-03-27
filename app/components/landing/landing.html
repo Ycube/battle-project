@@ -8,7 +8,7 @@
       <option value="SEASON2014">Season 4</option>
       <option value="SEASON3">Season 3</option>
     </select>
-      <input class="form-control" userName="userName" ng-model="userName" type="text" placeholder="Enter Summoner Name" aria-describedby="basic-addon1"></input>
+      <input class="form-control" userName="userName" ng-model="userName" type="text" placeholder="Enter Summoner Name" aria-describedby="basic-addon1" uib-typeahead="summoner.username for summoner in savedSummoners | filter:{ username: $viewValue }"></input>
       <span class="input-group-addon">
         <input class="" type="submit" value="Submit">
       </span>
